@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8IB-Cw-gV8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Contacts-->
+        <scene sceneID="i6b-EP-QMb">
+            <objects>
+                <viewController id="X9s-H1-m0u" customClass="ContactsViewController" customModule="CustomerInvite" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="628-jP-w5V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CWb-EU-YCm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="714"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactCell" id="yUG-A1-9bM">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yUG-A1-9bM" id="pzs-nh-MAm">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJV-do-Zfg">
+                                                    <rect key="frame" x="45" y="11" width="45" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZU6-yy-qII">
+                                <rect key="frame" x="16" y="810" width="382" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dP-l3-Pia">
+                                        <rect key="frame" x="0.0" y="7" width="187" height="30"/>
+                                        <state key="normal" title="Import"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCi-zw-Afo">
+                                        <rect key="frame" x="195" y="7" width="187" height="30"/>
+                                        <state key="normal" title="Export"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="R6F-Vy-Z28"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Qij-Fs-HxO" firstAttribute="bottom" secondItem="ZU6-yy-qII" secondAttribute="bottom" constant="8" id="42g-C6-z1i"/>
+                            <constraint firstItem="Qij-Fs-HxO" firstAttribute="trailing" secondItem="CWb-EU-YCm" secondAttribute="trailing" id="Fq0-ka-Ohp"/>
+                            <constraint firstItem="ZU6-yy-qII" firstAttribute="leading" secondItem="Qij-Fs-HxO" secondAttribute="leading" constant="16" id="Hg8-nD-bha"/>
+                            <constraint firstItem="ZU6-yy-qII" firstAttribute="top" secondItem="CWb-EU-YCm" secondAttribute="bottom" constant="8" id="Vq1-lO-z6j"/>
+                            <constraint firstItem="CWb-EU-YCm" firstAttribute="top" secondItem="Qij-Fs-HxO" secondAttribute="top" id="ahS-Wp-9UZ"/>
+                            <constraint firstItem="Qij-Fs-HxO" firstAttribute="trailing" secondItem="ZU6-yy-qII" secondAttribute="trailing" constant="16" id="tRp-XQ-HCS"/>
+                            <constraint firstItem="CWb-EU-YCm" firstAttribute="leading" secondItem="Qij-Fs-HxO" secondAttribute="leading" id="vqf-Jf-Fbo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qij-Fs-HxO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contacts" id="Vz6-KC-P1Z">
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="rpt-Sd-mBD"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contactsTableView" destination="CWb-EU-YCm" id="grQ-34-JRt"/>
+                        <outlet property="exportButton" destination="MCi-zw-Afo" id="3RE-4D-ghg"/>
+                        <outlet property="filterButton" destination="rpt-Sd-mBD" id="det-YN-fej"/>
+                        <outlet property="importButton" destination="0dP-l3-Pia" id="a6l-Al-8wt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cf4-bX-OWl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1902.8985507246377" y="-759.375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wft-J5-Me7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8IB-Cw-gV8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="OPY-Zq-dW8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="s6X-OK-iEK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="X9s-H1-m0u" kind="relationship" relationship="rootViewController" id="24q-Xp-rHG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8qF-AP-m86" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992.75362318840587" y="-759.375"/>
+        </scene>
+    </scenes>
+</document>
