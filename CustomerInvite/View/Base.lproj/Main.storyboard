@@ -20,14 +20,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactCell" id="EDG-tp-zJZ" customClass="ContactTableViewCell" customModule="CustomerInvite" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="65.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="57.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EDG-tp-zJZ" id="n3d-sD-jfy">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="65.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="57.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DmW-L3-RDz">
-                                                    <rect key="frame" x="28" y="15" width="358" height="35.5"/>
+                                                    <rect key="frame" x="28" y="11" width="358" height="35.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="pUm-x9-kNG">
                                                             <rect key="frame" x="0.0" y="0.0" width="358" height="15"/>
@@ -56,8 +56,8 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="DmW-L3-RDz" secondAttribute="bottom" constant="4" id="AMh-ho-PNR"/>
-                                                <constraint firstItem="DmW-L3-RDz" firstAttribute="top" secondItem="n3d-sD-jfy" secondAttribute="topMargin" constant="4" id="Nhi-oV-17q"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="DmW-L3-RDz" secondAttribute="bottom" id="AMh-ho-PNR"/>
+                                                <constraint firstItem="DmW-L3-RDz" firstAttribute="top" secondItem="n3d-sD-jfy" secondAttribute="topMargin" id="Nhi-oV-17q"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="DmW-L3-RDz" secondAttribute="trailing" constant="8" id="UDR-QL-RdV"/>
                                                 <constraint firstItem="DmW-L3-RDz" firstAttribute="leading" secondItem="n3d-sD-jfy" secondAttribute="leadingMargin" constant="8" id="lZA-DD-BJl"/>
                                             </constraints>
@@ -104,7 +104,7 @@
                         <viewLayoutGuide key="safeArea" id="Qij-Fs-HxO"/>
                     </view>
                     <navigationItem key="navigationItem" title="Contacts" id="Vz6-KC-P1Z">
-                        <barButtonItem key="rightBarButtonItem" title="Filter" id="rpt-Sd-mBD"/>
+                        <barButtonItem key="rightBarButtonItem" title="-" id="rpt-Sd-mBD"/>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="WeQ-Lv-dnb" id="2dq-o1-RtC"/>

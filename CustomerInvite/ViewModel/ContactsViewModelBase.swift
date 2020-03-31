@@ -15,10 +15,12 @@ final class ContactsViewModelBase: ContactsViewModel {
     private struct Constants {
         static let fileUrlString = "https://s3.amazonaws.com/intercom-take-home-test/customers.txt"
         static let distanceFromOfficeMessage = "Distance from office: %@"
+        static let dublinOfficeCoordinates = Coordinates(53.339428, -6.257664)
+        static let maxDistanceFromOffice: Double = 100
     }
 
     private var contacts = [Contact]()
-    private var isContactsFiltered = false
+    private var isFiltered = false
 
     // MARK: - Rx observables
 
@@ -37,7 +39,7 @@ final class ContactsViewModelBase: ContactsViewModel {
     // MARK: - Public methods
 
     func viewDidLoad() {
-        publishContactList()
+        publishDataSource()
         publishDataIsFiltered()
     }
 
@@ -51,18 +53,21 @@ final class ContactsViewModelBase: ContactsViewModel {
     }
 
     func filterData() {
-        isContactsFiltered.toggle()
+        isFiltered.toggle()
+        print(isFiltered)
+        publishDataSource()
         publishDataIsFiltered()
     }
     
     // MARK: - Private methods
 
-    private func publishContactList() {
-        _dataSource.onNext(contacts)
+    private func publishDataSource() {
+        let data = isFiltered ? contacts.filter { $0.distanceFromOffice <= Constants.maxDistanceFromOffice } : contacts
+        _dataSource.onNext(data)
     }
 
     private func publishDataIsFiltered() {
-        _isDataFiltered.accept(isContactsFiltered)
+        _isDataFiltered.accept(isFiltered)
     }
 
     private func downloadTxt() {
@@ -73,17 +78,26 @@ final class ContactsViewModelBase: ContactsViewModel {
                 self._alert.onNext(AlertDetails(alertTitle: "NO", alertMessage: "Couldn't parse"))
                 return
             }
-            self.addToContacts(from: list)
-            self.publishContactList()
+            self.contacts.removeAll()
+            self.appendToContacts(from: list)
+            self.publishDataSource()
             self._isDataLoading.accept(false)
         }
     }
 
-    private func addToContacts(from data: String) {
-        contacts.append(contentsOf: data.split(separator: "\n").compactMap {
-            let jsonData = Data($0.utf8)
-            return try? JSONDecoder().decode(Contact.self, from : jsonData)
-        })
+    private func appendToContacts(from data: String) {
+        contacts.append(contentsOf: data
+            .split(separator: "\n")
+            .compactMap { try? JSONDecoder().decode(Response.self, from : Data($0.utf8)) }
+            .map { Contact(id: String($0.userId),
+                           name: $0.name,
+                           distanceFromOffice: calculateDistanceFromOffice(contact: $0)) }
+        )
+        contacts.sort { $0.id < $1.id }
+    }
+
+    private func calculateDistanceFromOffice(contact: Response) -> Double {
+        101
     }
 
 }

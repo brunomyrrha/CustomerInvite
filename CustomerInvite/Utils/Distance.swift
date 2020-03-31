@@ -12,7 +12,9 @@ typealias Coordinates = (latitude: Double, longitude: Double)
 
 protocol Distance:AnyObject {
 
-    func distance(form location: Coordinates) -> Double
+    var instance: Distance { get }
+
+    func distance(from location: Coordinates) -> Double
 
 }
 
@@ -20,7 +22,6 @@ final class DistanceBase: Distance {
 
     private struct Constants {
 
-        static let dublinOfficeCoordinates = Coordinates(53.339428, -6.257664)
         static let earthRadius: Double = 6371
 
     }
@@ -33,8 +34,8 @@ final class DistanceBase: Distance {
 
     // MARK: - Public methods
 
-    func distance(form location: Coordinates) -> Double {
-        calculateGreatCircleDistance1(from: Constants.dublinOfficeCoordinates, to: location)
+    func distance(from location: Coordinates) -> Double {
+        0.0
     }
 
     // MARK: - Private methods (not exposed)

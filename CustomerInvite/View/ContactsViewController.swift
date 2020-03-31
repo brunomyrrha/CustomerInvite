@@ -16,7 +16,7 @@ final class ContactsViewController: UIViewController {
 
         static let cellIdentifier = "ContactCell"
         static let filterTitle = "Filter"
-        static let removeFilterTitle = "No Filter"
+        static let removeFilterTitle = "Remove Filter"
 
     }
 
@@ -44,6 +44,7 @@ final class ContactsViewController: UIViewController {
         bindIsDataLoading()
         bindIsDataFiltered()
         bindAlert()
+        bindShare()
     }
 
     private func bindDataSource() {
@@ -51,7 +52,7 @@ final class ContactsViewController: UIViewController {
             .observeOn(MainScheduler.instance)
             .bind(to: contactsTableView.rx
                 .items(cellIdentifier: Constants.cellIdentifier,cellType: ContactTableViewCell.self)) { index, model, cell in
-                    cell.idLabel.text = String(model.userId)
+                    cell.idLabel.text = String(model.id)
                     cell.nameLabel.text = model.name
             }
             .disposed(by: disposeBag)
@@ -60,6 +61,7 @@ final class ContactsViewController: UIViewController {
     private func bindIsDataLoading() {
         viewModel.isDataLoading
             .observeOn(MainScheduler.instance)
+            .distinctUntilChanged()
             .map { !$0 }
             .subscribe(onNext: setUpButtonsBehaviour)
             .disposed(by: disposeBag)
@@ -68,6 +70,7 @@ final class ContactsViewController: UIViewController {
     private func bindIsDataFiltered() {
         viewModel.isDataFiltered
             .observeOn(MainScheduler.instance)
+            .distinctUntilChanged()
             .subscribe(onNext: toggleFilter)
             .disposed(by: disposeBag)
     }
@@ -84,6 +87,11 @@ final class ContactsViewController: UIViewController {
                 alertController.addAction(UIAlertAction(title: details.buttonTitle, style: .default, handler: nil))
                 self.present(alertController, animated: true)
             }).disposed(by: disposeBag)
+    }
+
+    private func bindShare() {
+        let activityController = UIActivityViewController(activityItems: ["NO IDEA"], applicationActivities: nil)
+        present(activityController, animated: true)
     }
 
     // MARK: - Rx observing
@@ -116,8 +124,8 @@ final class ContactsViewController: UIViewController {
         contactsTableView.isHidden = !isEnabled
     }
 
-    private func toggleFilter(isOn: Bool) {
-        filterButton.title = isOn ? Constants.filterTitle : Constants.removeFilterTitle
+    private func toggleFilter(hasFilter: Bool) {
+        filterButton.title = hasFilter ? Constants.removeFilterTitle : Constants.filterTitle
     }
 
 }
