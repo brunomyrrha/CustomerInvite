@@ -13,7 +13,9 @@ protocol ContactsViewModel: AnyObject {
 
     var dataSource: Observable<[Contact]> { get }
     var isDataLoading: Observable<Bool> { get }
-    
+    var isDataFiltered: Observable<Bool> { get }
+    var alert: Observable<AlertDetails> { get }
+
     func viewDidLoad()
 
     func importData()

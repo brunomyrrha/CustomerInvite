@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		1BD690701DF4EB9BBE15133C /* Pods_CustomerInviteUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CABA860405010B4A9FA13C1 /* Pods_CustomerInviteUnitTests.framework */; };
 		521DB6D42433BAEC00D1B6C6 /* TestDistanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB6D32433BAEC00D1B6C6 /* TestDistanceUtils.swift */; };
-		521DB6D62433BC2200D1B6C6 /* Double+Trigonometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB6D52433BC2200D1B6C6 /* Double+Trigonometric.swift */; };
+		521DB6D62433BC2200D1B6C6 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB6D52433BC2200D1B6C6 /* Double+Extension.swift */; };
+		521DB6DB2433D7D100D1B6C6 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB6DA2433D7D100D1B6C6 /* FileManager.swift */; };
+		521DB6DD2433DBF300D1B6C6 /* AlertDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB6DC2433DBF300D1B6C6 /* AlertDetails.swift */; };
+		521DB6E42433E50300D1B6C6 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB6E32433E50300D1B6C6 /* ContactTableViewCell.swift */; };
 		5288F8E02432806E00472CFB /* CustomerInviteUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288F8DF2432806E00472CFB /* CustomerInviteUnitTests.swift */; };
 		52AA631424327E9A00A35943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA631324327E9A00A35943 /* AppDelegate.swift */; };
 		52AA631624327E9A00A35943 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA631524327E9A00A35943 /* SceneDelegate.swift */; };
@@ -20,7 +23,7 @@
 		52C3B06A24328BF80082F2BE /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3B06924328BF80082F2BE /* ContactsViewModel.swift */; };
 		52C3B06C24328C3C0082F2BE /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3B06B24328C3C0082F2BE /* Contact.swift */; };
 		52C3B07024328C930082F2BE /* ContactsViewModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3B06F24328C930082F2BE /* ContactsViewModelBase.swift */; };
-		52E670C62433304B00E9CDE0 /* DistanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E670C52433304B00E9CDE0 /* DistanceUtils.swift */; };
+		52E670C62433304B00E9CDE0 /* Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E670C52433304B00E9CDE0 /* Distance.swift */; };
 		E26FDC7C3F80120C33420B9F /* Pods_CustomerInvite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC7F3D2C03C9AA64E453372 /* Pods_CustomerInvite.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +42,10 @@
 		1545D6116F505772DE0F3628 /* Pods-CustomerInviteUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomerInviteUnitTests.debug.xcconfig"; path = "Target Support Files/Pods-CustomerInviteUnitTests/Pods-CustomerInviteUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4CC7F3D2C03C9AA64E453372 /* Pods_CustomerInvite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomerInvite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		521DB6D32433BAEC00D1B6C6 /* TestDistanceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDistanceUtils.swift; sourceTree = "<group>"; };
-		521DB6D52433BC2200D1B6C6 /* Double+Trigonometric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Trigonometric.swift"; sourceTree = "<group>"; };
+		521DB6D52433BC2200D1B6C6 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		521DB6DA2433D7D100D1B6C6 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		521DB6DC2433DBF300D1B6C6 /* AlertDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDetails.swift; sourceTree = "<group>"; };
+		521DB6E32433E50300D1B6C6 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		5288F8DD2432806E00472CFB /* CustomerInviteUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomerInviteUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5288F8DF2432806E00472CFB /* CustomerInviteUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInviteUnitTests.swift; sourceTree = "<group>"; };
 		5288F8E12432806E00472CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,7 +60,7 @@
 		52C3B06924328BF80082F2BE /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
 		52C3B06B24328C3C0082F2BE /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		52C3B06F24328C930082F2BE /* ContactsViewModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModelBase.swift; sourceTree = "<group>"; };
-		52E670C52433304B00E9CDE0 /* DistanceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceUtils.swift; sourceTree = "<group>"; };
+		52E670C52433304B00E9CDE0 /* Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Distance.swift; sourceTree = "<group>"; };
 		67F0A2365ADF0C2ECAE34D66 /* Pods-CustomerInvite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomerInvite.debug.xcconfig"; path = "Target Support Files/Pods-CustomerInvite/Pods-CustomerInvite.debug.xcconfig"; sourceTree = "<group>"; };
 		6CABA860405010B4A9FA13C1 /* Pods_CustomerInviteUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomerInviteUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0214758D4E0469FE4FA085 /* Pods-CustomerInviteUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomerInviteUnitTests.release.xcconfig"; path = "Target Support Files/Pods-CustomerInviteUnitTests/Pods-CustomerInviteUnitTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +86,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		521DB6D72433D47500D1B6C6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52C3B06924328BF80082F2BE /* ContactsViewModel.swift */,
+				52C3B06F24328C930082F2BE /* ContactsViewModelBase.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		521DB6D82433D47B00D1B6C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52C3B06B24328C3C0082F2BE /* Contact.swift */,
+				521DB6DC2433DBF300D1B6C6 /* AlertDetails.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		521DB6D92433D49000D1B6C6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				52E670C52433304B00E9CDE0 /* Distance.swift */,
+				521DB6D52433BC2200D1B6C6 /* Double+Extension.swift */,
+				521DB6DA2433D7D100D1B6C6 /* FileManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		5288F8D824327F6800472CFB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,26 +157,25 @@
 		52AA631224327E9A00A35943 /* CustomerInvite */ = {
 			isa = PBXGroup;
 			children = (
-				52AA631E24327E9B00A35943 /* LaunchScreen.storyboard */,
-				52AA631924327E9A00A35943 /* Main.storyboard */,
-				52C3B05B243280F10082F2BE /* Contacts */,
-				52E670C52433304B00E9CDE0 /* DistanceUtils.swift */,
-				521DB6D52433BC2200D1B6C6 /* Double+Trigonometric.swift */,
+				521DB6D82433D47B00D1B6C6 /* Model */,
+				52C3B05B243280F10082F2BE /* View */,
+				521DB6D72433D47500D1B6C6 /* ViewModel */,
+				521DB6D92433D49000D1B6C6 /* Utils */,
 				5288F8D824327F6800472CFB /* Support Files */,
 				52AA632124327E9B00A35943 /* Info.plist */,
 			);
 			path = CustomerInvite;
 			sourceTree = "<group>";
 		};
-		52C3B05B243280F10082F2BE /* Contacts */ = {
+		52C3B05B243280F10082F2BE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				52AA631E24327E9B00A35943 /* LaunchScreen.storyboard */,
+				52AA631924327E9A00A35943 /* Main.storyboard */,
 				52C3B06524328B400082F2BE /* ContactsViewController.swift */,
-				52C3B06924328BF80082F2BE /* ContactsViewModel.swift */,
-				52C3B06F24328C930082F2BE /* ContactsViewModelBase.swift */,
-				52C3B06B24328C3C0082F2BE /* Contact.swift */,
+				521DB6E32433E50300D1B6C6 /* ContactTableViewCell.swift */,
 			);
-			path = Contacts;
+			path = View;
 			sourceTree = "<group>";
 		};
 		9ABF89E37F654326AE093C70 /* Pods */ = {
@@ -361,10 +394,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				52C3B06C24328C3C0082F2BE /* Contact.swift in Sources */,
-				521DB6D62433BC2200D1B6C6 /* Double+Trigonometric.swift in Sources */,
+				521DB6D62433BC2200D1B6C6 /* Double+Extension.swift in Sources */,
+				521DB6E42433E50300D1B6C6 /* ContactTableViewCell.swift in Sources */,
 				52C3B07024328C930082F2BE /* ContactsViewModelBase.swift in Sources */,
-				52E670C62433304B00E9CDE0 /* DistanceUtils.swift in Sources */,
+				521DB6DD2433DBF300D1B6C6 /* AlertDetails.swift in Sources */,
+				52E670C62433304B00E9CDE0 /* Distance.swift in Sources */,
 				52C3B06A24328BF80082F2BE /* ContactsViewModel.swift in Sources */,
+				521DB6DB2433D7D100D1B6C6 /* FileManager.swift in Sources */,
 				52AA631424327E9A00A35943 /* AppDelegate.swift in Sources */,
 				52AA631624327E9A00A35943 /* SceneDelegate.swift in Sources */,
 				52C3B06624328B400082F2BE /* ContactsViewController.swift in Sources */,

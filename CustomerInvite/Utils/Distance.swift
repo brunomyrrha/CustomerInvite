@@ -10,13 +10,13 @@ import Foundation
 
 typealias Coordinates = (latitude: Double, longitude: Double)
 
-protocol DistanceUtils:AnyObject {
+protocol Distance:AnyObject {
 
     func distance(form location: Coordinates) -> Double
 
 }
 
-final class DistanceUtilsBase: DistanceUtils {
+final class DistanceBase: Distance {
 
     private struct Constants {
 
@@ -27,7 +27,7 @@ final class DistanceUtilsBase: DistanceUtils {
 
     // MARK: - Singleton instance
 
-    let instance: DistanceUtils = DistanceUtilsBase()
+    let instance: Distance = DistanceBase()
 
     private init() {}
 
