@@ -11,6 +11,7 @@ import RxSwift
 
 protocol ContactsViewModel: AnyObject {
 
+    var api: ContactsApiManager { get set }
     var dataSource: Observable<[Contact]> { get }
     var isDataLoading: Observable<Bool> { get }
     var isDataFiltered: Observable<Bool> { get }

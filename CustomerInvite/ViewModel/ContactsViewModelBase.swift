@@ -23,7 +23,7 @@ final class ContactsViewModelBase: ContactsViewModel {
 
     }
 
-    let api: ContactsApiManager = ContactsApiManagerBase()
+    var api: ContactsApiManager = ContactsApiManagerBase()
     private var contacts = [Contact]()
     private var isFiltered = false
 
@@ -47,7 +47,6 @@ final class ContactsViewModelBase: ContactsViewModel {
 
     func viewDidLoad() {
         importData()
-        publishDataSource()
         publishDataIsFiltered()
     }
 

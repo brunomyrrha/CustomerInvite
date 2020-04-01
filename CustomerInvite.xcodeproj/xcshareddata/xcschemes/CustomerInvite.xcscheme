@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "1140"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C98FB3F8060C2AB696B6C470237DA14E"
-               BuildableName = "Pods_CustomerInviteUnitTests.framework"
-               BlueprintName = "Pods-CustomerInviteUnitTests"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "52AA630F24327E9A00A35943"
+               BuildableName = "Customer Invite.app"
+               BlueprintName = "CustomerInvite"
+               ReferencedContainer = "container:CustomerInvite.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5288F8DC2432806E00472CFB"
+               BuildableName = "CustomerInviteUnitTests.xctest"
+               BlueprintName = "CustomerInviteUnitTests"
+               ReferencedContainer = "container:CustomerInvite.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -40,6 +50,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "52AA630F24327E9A00A35943"
+            BuildableName = "Customer Invite.app"
+            BlueprintName = "CustomerInvite"
+            ReferencedContainer = "container:CustomerInvite.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -47,6 +67,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "52AA630F24327E9A00A35943"
+            BuildableName = "Customer Invite.app"
+            BlueprintName = "CustomerInvite"
+            ReferencedContainer = "container:CustomerInvite.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

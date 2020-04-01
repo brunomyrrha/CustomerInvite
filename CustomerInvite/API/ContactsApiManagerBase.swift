@@ -12,12 +12,14 @@ final class ContactsApiManagerBase: ContactsApiManager {
 
     private struct Constants {
 
-        static let fileUrlString = "https://s3.amazonaws.com/intercom-take-home-test/customers.txt"
+        static let downloadUrlString = "https://s3.amazonaws.com/intercom-take-home-test/customers.txt"
 
     }
 
+    // MARK: - Public methods
+
     func downloadTxtAsString(completion: @escaping (String?, Error?) -> Void) {
-        guard let url = URL(string: Constants.fileUrlString) else { return }
+        guard let url = URL(string: Constants.downloadUrlString) else { return }
         DataManager.download(from: url) { (localUrl, response, error) in
             if error == nil,
                 (response as? HTTPURLResponse)?.statusCode == 200,

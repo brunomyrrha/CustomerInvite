@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1BD690701DF4EB9BBE15133C /* Pods_CustomerInviteUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CABA860405010B4A9FA13C1 /* Pods_CustomerInviteUnitTests.framework */; };
-		521DB6D42433BAEC00D1B6C6 /* TestDistanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB6D32433BAEC00D1B6C6 /* TestDistanceUtils.swift */; };
+		521DB6D42433BAEC00D1B6C6 /* DistanceUtilsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB6D32433BAEC00D1B6C6 /* DistanceUtilsUnitTests.swift */; };
 		521DB6D62433BC2200D1B6C6 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB6D52433BC2200D1B6C6 /* Double+Extension.swift */; };
 		521DB6DB2433D7D100D1B6C6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB6DA2433D7D100D1B6C6 /* DataManager.swift */; };
 		521DB6DD2433DBF300D1B6C6 /* AlertDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB6DC2433DBF300D1B6C6 /* AlertDetails.swift */; };
@@ -17,7 +16,8 @@
 		521DB6E82433F1EF00D1B6C6 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB6E72433F1EF00D1B6C6 /* Contact.swift */; };
 		52280DC7243524DF00400A8E /* ContactsApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52280DC6243524DF00400A8E /* ContactsApiManager.swift */; };
 		52280DCA2435250700400A8E /* ContactsApiManagerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52280DC92435250700400A8E /* ContactsApiManagerBase.swift */; };
-		5288F8E02432806E00472CFB /* CustomerInviteUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288F8DF2432806E00472CFB /* CustomerInviteUnitTests.swift */; };
+		52280DCC24354E3A00400A8E /* ContactsViewModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52280DCB24354E3A00400A8E /* ContactsViewModelUnitTests.swift */; };
+		5288F8E02432806E00472CFB /* DoubleRadsDegreesExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288F8DF2432806E00472CFB /* DoubleRadsDegreesExtensionTest.swift */; };
 		52AA631424327E9A00A35943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA631324327E9A00A35943 /* AppDelegate.swift */; };
 		52AA631624327E9A00A35943 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA631524327E9A00A35943 /* SceneDelegate.swift */; };
 		52AA631B24327E9A00A35943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52AA631924327E9A00A35943 /* Main.storyboard */; };
@@ -27,6 +27,7 @@
 		52C3B06A24328BF80082F2BE /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3B06924328BF80082F2BE /* ContactsViewModel.swift */; };
 		52C3B07024328C930082F2BE /* ContactsViewModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3B06F24328C930082F2BE /* ContactsViewModelBase.swift */; };
 		52E670C62433304B00E9CDE0 /* Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E670C52433304B00E9CDE0 /* Distance.swift */; };
+		683F13081EC7F625AD37FF34 /* Pods_CustomerInvite_CustomerInviteUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2DD781AD3DA46AFE74464A /* Pods_CustomerInvite_CustomerInviteUnitTests.framework */; };
 		E26FDC7C3F80120C33420B9F /* Pods_CustomerInvite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC7F3D2C03C9AA64E453372 /* Pods_CustomerInvite.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +45,7 @@
 		082EA768B459BFBC5A552100 /* Pods-CustomerInvite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomerInvite.release.xcconfig"; path = "Target Support Files/Pods-CustomerInvite/Pods-CustomerInvite.release.xcconfig"; sourceTree = "<group>"; };
 		1545D6116F505772DE0F3628 /* Pods-CustomerInviteUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomerInviteUnitTests.debug.xcconfig"; path = "Target Support Files/Pods-CustomerInviteUnitTests/Pods-CustomerInviteUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4CC7F3D2C03C9AA64E453372 /* Pods_CustomerInvite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomerInvite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		521DB6D32433BAEC00D1B6C6 /* TestDistanceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDistanceUtils.swift; sourceTree = "<group>"; };
+		521DB6D32433BAEC00D1B6C6 /* DistanceUtilsUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceUtilsUnitTests.swift; sourceTree = "<group>"; };
 		521DB6D52433BC2200D1B6C6 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		521DB6DA2433D7D100D1B6C6 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		521DB6DC2433DBF300D1B6C6 /* AlertDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDetails.swift; sourceTree = "<group>"; };
@@ -53,8 +54,9 @@
 		521DB6E72433F1EF00D1B6C6 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		52280DC6243524DF00400A8E /* ContactsApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsApiManager.swift; sourceTree = "<group>"; };
 		52280DC92435250700400A8E /* ContactsApiManagerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsApiManagerBase.swift; sourceTree = "<group>"; };
+		52280DCB24354E3A00400A8E /* ContactsViewModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModelUnitTests.swift; sourceTree = "<group>"; };
 		5288F8DD2432806E00472CFB /* CustomerInviteUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomerInviteUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5288F8DF2432806E00472CFB /* CustomerInviteUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInviteUnitTests.swift; sourceTree = "<group>"; };
+		5288F8DF2432806E00472CFB /* DoubleRadsDegreesExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleRadsDegreesExtensionTest.swift; sourceTree = "<group>"; };
 		5288F8E12432806E00472CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52AA631024327E9A00A35943 /* Customer Invite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Customer Invite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AA631324327E9A00A35943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,8 +70,10 @@
 		52C3B06F24328C930082F2BE /* ContactsViewModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModelBase.swift; sourceTree = "<group>"; };
 		52E670C52433304B00E9CDE0 /* Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Distance.swift; sourceTree = "<group>"; };
 		67F0A2365ADF0C2ECAE34D66 /* Pods-CustomerInvite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomerInvite.debug.xcconfig"; path = "Target Support Files/Pods-CustomerInvite/Pods-CustomerInvite.debug.xcconfig"; sourceTree = "<group>"; };
-		6CABA860405010B4A9FA13C1 /* Pods_CustomerInviteUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomerInviteUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0214758D4E0469FE4FA085 /* Pods-CustomerInviteUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomerInviteUnitTests.release.xcconfig"; path = "Target Support Files/Pods-CustomerInviteUnitTests/Pods-CustomerInviteUnitTests.release.xcconfig"; sourceTree = "<group>"; };
+		8DB79DF803222E10E63629F4 /* Pods-CustomerInvite-CustomerInviteUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomerInvite-CustomerInviteUnitTests.debug.xcconfig"; path = "Target Support Files/Pods-CustomerInvite-CustomerInviteUnitTests/Pods-CustomerInvite-CustomerInviteUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD2DD781AD3DA46AFE74464A /* Pods_CustomerInvite_CustomerInviteUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomerInvite_CustomerInviteUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F778F34E33565D7F59B6AF53 /* Pods-CustomerInvite-CustomerInviteUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomerInvite-CustomerInviteUnitTests.release.xcconfig"; path = "Target Support Files/Pods-CustomerInvite-CustomerInviteUnitTests/Pods-CustomerInvite-CustomerInviteUnitTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BD690701DF4EB9BBE15133C /* Pods_CustomerInviteUnitTests.framework in Frameworks */,
+				683F13081EC7F625AD37FF34 /* Pods_CustomerInvite_CustomerInviteUnitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +147,9 @@
 		5288F8DE2432806E00472CFB /* CustomerInviteUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				521DB6D32433BAEC00D1B6C6 /* TestDistanceUtils.swift */,
-				5288F8DF2432806E00472CFB /* CustomerInviteUnitTests.swift */,
+				52280DCB24354E3A00400A8E /* ContactsViewModelUnitTests.swift */,
+				521DB6D32433BAEC00D1B6C6 /* DistanceUtilsUnitTests.swift */,
+				5288F8DF2432806E00472CFB /* DoubleRadsDegreesExtensionTest.swift */,
 				5288F8E12432806E00472CFB /* Info.plist */,
 			);
 			path = CustomerInviteUnitTests;
@@ -173,10 +178,10 @@
 		52AA631224327E9A00A35943 /* CustomerInvite */ = {
 			isa = PBXGroup;
 			children = (
-				52280DC8243524EA00400A8E /* API */,
 				521DB6D82433D47B00D1B6C6 /* Model */,
 				52C3B05B243280F10082F2BE /* View */,
 				521DB6D72433D47500D1B6C6 /* ViewModel */,
+				52280DC8243524EA00400A8E /* API */,
 				521DB6D92433D49000D1B6C6 /* Utils */,
 				5288F8D824327F6800472CFB /* Support Files */,
 				52AA632124327E9B00A35943 /* Info.plist */,
@@ -202,6 +207,8 @@
 				082EA768B459BFBC5A552100 /* Pods-CustomerInvite.release.xcconfig */,
 				1545D6116F505772DE0F3628 /* Pods-CustomerInviteUnitTests.debug.xcconfig */,
 				7A0214758D4E0469FE4FA085 /* Pods-CustomerInviteUnitTests.release.xcconfig */,
+				8DB79DF803222E10E63629F4 /* Pods-CustomerInvite-CustomerInviteUnitTests.debug.xcconfig */,
+				F778F34E33565D7F59B6AF53 /* Pods-CustomerInvite-CustomerInviteUnitTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -210,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				4CC7F3D2C03C9AA64E453372 /* Pods_CustomerInvite.framework */,
-				6CABA860405010B4A9FA13C1 /* Pods_CustomerInviteUnitTests.framework */,
+				BD2DD781AD3DA46AFE74464A /* Pods_CustomerInvite_CustomerInviteUnitTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -339,15 +346,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CustomerInviteUnitTests/Pods-CustomerInviteUnitTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CustomerInvite-CustomerInviteUnitTests/Pods-CustomerInvite-CustomerInviteUnitTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CustomerInviteUnitTests/Pods-CustomerInviteUnitTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CustomerInvite-CustomerInviteUnitTests/Pods-CustomerInvite-CustomerInviteUnitTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CustomerInviteUnitTests/Pods-CustomerInviteUnitTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CustomerInvite-CustomerInviteUnitTests/Pods-CustomerInvite-CustomerInviteUnitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4F22E71A948E805611E18F89 /* [CP] Check Pods Manifest.lock */ = {
@@ -365,7 +372,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CustomerInviteUnitTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CustomerInvite-CustomerInviteUnitTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -401,8 +408,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				521DB6D42433BAEC00D1B6C6 /* TestDistanceUtils.swift in Sources */,
-				5288F8E02432806E00472CFB /* CustomerInviteUnitTests.swift in Sources */,
+				52280DCC24354E3A00400A8E /* ContactsViewModelUnitTests.swift in Sources */,
+				521DB6D42433BAEC00D1B6C6 /* DistanceUtilsUnitTests.swift in Sources */,
+				5288F8E02432806E00472CFB /* DoubleRadsDegreesExtensionTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,7 +467,7 @@
 /* Begin XCBuildConfiguration section */
 		5288F8E42432806E00472CFB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1545D6116F505772DE0F3628 /* Pods-CustomerInviteUnitTests.debug.xcconfig */;
+			baseConfigurationReference = 8DB79DF803222E10E63629F4 /* Pods-CustomerInvite-CustomerInviteUnitTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -474,13 +482,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomerInvite.app/CustomerInvite";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Customer Invite.app/Customer Invite";
 			};
 			name = Debug;
 		};
 		5288F8E52432806E00472CFB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A0214758D4E0469FE4FA085 /* Pods-CustomerInviteUnitTests.release.xcconfig */;
+			baseConfigurationReference = F778F34E33565D7F59B6AF53 /* Pods-CustomerInvite-CustomerInviteUnitTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -495,7 +503,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomerInvite.app/CustomerInvite";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Customer Invite.app/Customer Invite";
 			};
 			name = Release;
 		};
