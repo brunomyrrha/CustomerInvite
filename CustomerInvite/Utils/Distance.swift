@@ -14,7 +14,7 @@ final class Distance {
 
     private struct Constants {
 
-        static let earthRadius: Double = 6371
+        static let earthRadius: Double = 6371.0088
 
     }
 
@@ -27,20 +27,12 @@ final class Distance {
     // MARK: - Public methods
 
     func distance(from origin: Coordinates, to destination: Coordinates) -> Double {
-        calculateGreatCircleDistance1(from: origin, to: destination)
-    }
-
-    // MARK: - Private methods (not exposed)
-
-    func calculateGreatCircleDistance1(from origin: Coordinates, to destination: Coordinates) -> Double {
-        let earthRadius: Double = 6371
-        let pOrigin = origin.latitude.toRads()
-        let pDestination = destination.latitude.toRads()
-        let deltaP = (destination.latitude - origin.latitude).toRads()
-        let deltaL = (destination.longitude - origin.longitude).toRads()
-        let innerSqrt = sin(deltaP / 2) * sin(deltaP / 2) + cos(pOrigin) * cos(pDestination) * sin(deltaL / 2) * sin(deltaL / 2)
-        let centralAngle = 2 * atan2(sqrt(innerSqrt), sqrt(1 - innerSqrt))
-        return earthRadius * centralAngle
+        let oLat = origin.latitude.toRads()
+        let oLong = origin.longitude.toRads()
+        let dLat = destination.latitude.toRads()
+        let dLong = destination.longitude.toRads()
+        let angle = acos(sin(oLat) * sin(dLat) + cos(oLat) * cos(dLat) * cos(abs(oLong - dLong)))
+        return Constants.earthRadius * angle
     }
 
 }
