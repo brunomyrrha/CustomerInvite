@@ -10,7 +10,7 @@
 		1BD690701DF4EB9BBE15133C /* Pods_CustomerInviteUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CABA860405010B4A9FA13C1 /* Pods_CustomerInviteUnitTests.framework */; };
 		521DB6D42433BAEC00D1B6C6 /* TestDistanceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB6D32433BAEC00D1B6C6 /* TestDistanceUtils.swift */; };
 		521DB6D62433BC2200D1B6C6 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB6D52433BC2200D1B6C6 /* Double+Extension.swift */; };
-		521DB6DB2433D7D100D1B6C6 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB6DA2433D7D100D1B6C6 /* FileManager.swift */; };
+		521DB6DB2433D7D100D1B6C6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB6DA2433D7D100D1B6C6 /* DataManager.swift */; };
 		521DB6DD2433DBF300D1B6C6 /* AlertDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB6DC2433DBF300D1B6C6 /* AlertDetails.swift */; };
 		521DB6E42433E50300D1B6C6 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB6E32433E50300D1B6C6 /* ContactTableViewCell.swift */; };
 		521DB6E62433EE5E00D1B6C6 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521DB6E52433EE5E00D1B6C6 /* Response.swift */; };
@@ -46,7 +46,7 @@
 		4CC7F3D2C03C9AA64E453372 /* Pods_CustomerInvite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomerInvite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		521DB6D32433BAEC00D1B6C6 /* TestDistanceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDistanceUtils.swift; sourceTree = "<group>"; };
 		521DB6D52433BC2200D1B6C6 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
-		521DB6DA2433D7D100D1B6C6 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		521DB6DA2433D7D100D1B6C6 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		521DB6DC2433DBF300D1B6C6 /* AlertDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDetails.swift; sourceTree = "<group>"; };
 		521DB6E32433E50300D1B6C6 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		521DB6E52433EE5E00D1B6C6 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		5288F8DD2432806E00472CFB /* CustomerInviteUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomerInviteUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5288F8DF2432806E00472CFB /* CustomerInviteUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInviteUnitTests.swift; sourceTree = "<group>"; };
 		5288F8E12432806E00472CFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52AA631024327E9A00A35943 /* CustomerInvite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomerInvite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52AA631024327E9A00A35943 /* Customer Invite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Customer Invite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AA631324327E9A00A35943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52AA631524327E9A00A35943 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		52AA631A24327E9A00A35943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 			children = (
 				52E670C52433304B00E9CDE0 /* Distance.swift */,
 				521DB6D52433BC2200D1B6C6 /* Double+Extension.swift */,
-				521DB6DA2433D7D100D1B6C6 /* FileManager.swift */,
+				521DB6DA2433D7D100D1B6C6 /* DataManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -164,7 +164,7 @@
 		52AA631124327E9A00A35943 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52AA631024327E9A00A35943 /* CustomerInvite.app */,
+				52AA631024327E9A00A35943 /* Customer Invite.app */,
 				5288F8DD2432806E00472CFB /* CustomerInviteUnitTests.xctest */,
 			);
 			name = Products;
@@ -254,7 +254,7 @@
 			);
 			name = CustomerInvite;
 			productName = CustomerInvite;
-			productReference = 52AA631024327E9A00A35943 /* CustomerInvite.app */;
+			productReference = 52AA631024327E9A00A35943 /* Customer Invite.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -418,7 +418,7 @@
 				521DB6DD2433DBF300D1B6C6 /* AlertDetails.swift in Sources */,
 				52E670C62433304B00E9CDE0 /* Distance.swift in Sources */,
 				52C3B06A24328BF80082F2BE /* ContactsViewModel.swift in Sources */,
-				521DB6DB2433D7D100D1B6C6 /* FileManager.swift in Sources */,
+				521DB6DB2433D7D100D1B6C6 /* DataManager.swift in Sources */,
 				52AA631424327E9A00A35943 /* AppDelegate.swift in Sources */,
 				52280DCA2435250700400A8E /* ContactsApiManagerBase.swift in Sources */,
 				52280DC7243524DF00400A8E /* ContactsApiManager.swift in Sources */,
@@ -627,7 +627,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.diniz.CustomerInvite;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Customer Invite";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -647,7 +647,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.diniz.CustomerInvite;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Customer Invite";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

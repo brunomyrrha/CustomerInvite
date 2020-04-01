@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Contact {
+struct Contact: Encodable {
 
     let id: Int
     let name: String

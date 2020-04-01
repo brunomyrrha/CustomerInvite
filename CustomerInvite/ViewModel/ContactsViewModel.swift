@@ -15,7 +15,7 @@ protocol ContactsViewModel: AnyObject {
     var isDataLoading: Observable<Bool> { get }
     var isDataFiltered: Observable<Bool> { get }
     var alert: Observable<AlertDetails> { get }
-    var share: Observable<URL> { get }
+    var share: Observable<[Any]> { get }
 
     func viewDidLoad()
 

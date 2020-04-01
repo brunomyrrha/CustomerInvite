@@ -1,5 +1,5 @@
 //
-//  FileManager.swift
+//  DataManager.swift
 //  CustomerInvite
 //
 //  Created by Bruno Diniz on 31/03/2020.
@@ -11,7 +11,7 @@ import Foundation
 
 typealias DownloadCompletion = (URL?, URLResponse?, Error?) -> Void
 
-final class FileManager {
+final class DataManager {
 
     class func download(from url: URL, completion: @escaping  DownloadCompletion) {
         let task = URLSession.shared.downloadTask(with: url) { data, response, error in
@@ -20,8 +20,16 @@ final class FileManager {
         task.resume()
     }
 
-    class func exportTo() {
-        
+    class func export(_ data: [Contact]) -> URL? {
+        guard let encodedData = try? JSONEncoder().encode(data) else { return nil }
+        let filename = "export.txt"
+        let temp = FileManager.default.temporaryDirectory.appendingPathComponent(filename)
+        do {
+            try encodedData.write(to: temp)
+            return temp
+        } catch {
+            return nil
+        }
     }
 
 }

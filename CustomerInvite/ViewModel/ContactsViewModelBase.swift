@@ -18,10 +18,12 @@ final class ContactsViewModelBase: ContactsViewModel {
         static let dublinOfficeCoordinates = Coordinates(53.339428, -6.257664)
         static let maxDistanceFromOffice: Double = 100
         static let defaultErrorMessage = "Something wrong happened. Try again later."
+        static let createFileErrorMessage = "Not able to create export file"
+        static let errorTitle = "Oops..."
 
     }
 
-    private let api: ContactsApiManager = ContactsApiManagerBase()
+    let api: ContactsApiManager = ContactsApiManagerBase()
     private var contacts = [Contact]()
     private var isFiltered = false
 
@@ -39,7 +41,7 @@ final class ContactsViewModelBase: ContactsViewModel {
     private let _isDataLoading = BehaviorRelay<Bool>(value: false)
     private let _isDataFiltered = BehaviorRelay<Bool>(value: false)
     private let _alert = PublishSubject<AlertDetails>()
-    private let _share = PublishSubject<URL>()
+    private let _share = PublishSubject<[Any]>()
 
     // MARK: - Public methods
 
@@ -57,7 +59,7 @@ final class ContactsViewModelBase: ContactsViewModel {
                 self.contacts = self.convertStringData(from: dataString)
                 self.publishDataSource()
             } else {
-                let details = AlertDetails(alertTitle: "Error",
+                let details = AlertDetails(alertTitle: Constants.errorTitle,
                                            alertMessage: error?.localizedDescription ?? Constants.defaultErrorMessage)
                 self._alert.onNext(details)
             }
@@ -66,8 +68,13 @@ final class ContactsViewModelBase: ContactsViewModel {
     }
 
     func exportData() {
-        let url = URL(string: "https://www.google.com")!
-        _share.onNext(url)
+        let data = isFiltered ? contacts.filter { $0.distanceFromOffice <= Constants.maxDistanceFromOffice } : contacts
+        if let shareableItem = DataManager.export(data) {
+            _share.onNext([shareableItem])
+        } else {
+            let details = AlertDetails(alertTitle: Constants.errorTitle, alertMessage: Constants.createFileErrorMessage)
+            _alert.onNext(details)
+        }
     }
 
     func filterData() {

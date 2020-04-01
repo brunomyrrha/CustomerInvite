@@ -18,7 +18,7 @@ final class ContactsApiManagerBase: ContactsApiManager {
 
     func downloadTxtAsString(completion: @escaping (String?, Error?) -> Void) {
         guard let url = URL(string: Constants.fileUrlString) else { return }
-        FileManager.download(from: url) { (localUrl, response, error) in
+        DataManager.download(from: url) { (localUrl, response, error) in
             if error == nil,
                 (response as? HTTPURLResponse)?.statusCode == 200,
                 let localUrl = localUrl,

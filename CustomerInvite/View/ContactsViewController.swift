@@ -91,8 +91,8 @@ final class ContactsViewController: UIViewController {
     private func bindShare() {
         viewModel.share
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [unowned self] url in
-                let activityController = UIActivityViewController(activityItems: ["NO IDEA"], applicationActivities: nil)
+            .subscribe(onNext: { [unowned self] items in
+                let activityController = UIActivityViewController(activityItems: items, applicationActivities: nil)
                 self.present(activityController, animated: true)
             }).disposed(by: disposeBag)
     }
