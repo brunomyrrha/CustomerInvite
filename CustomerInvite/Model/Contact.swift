@@ -10,7 +10,7 @@ import Foundation
 
 struct Contact {
 
-    let id: String
+    let id: Int
     let name: String
     var distanceFromOffice: Double
 

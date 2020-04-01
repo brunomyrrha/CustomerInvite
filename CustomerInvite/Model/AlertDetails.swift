@@ -11,7 +11,7 @@ import Foundation
 struct AlertDetails {
 
     let alertTitle: String
-    let alertMessage: String
-    let buttonTitle: String = "Ok"
+    let alertMessage: String?
+    let buttonTitle: String? = "Ok"
 
 }

@@ -15,8 +15,8 @@ final class ContactsViewController: UIViewController {
     private struct Constants {
 
         static let cellIdentifier = "ContactCell"
-        static let filterTitle = "Filter"
-        static let removeFilterTitle = "Remove Filter"
+        static let filterTitle = "Nearby customers"
+        static let removeFilterTitle = "All customers"
 
     }
 
@@ -79,8 +79,7 @@ final class ContactsViewController: UIViewController {
     private func bindAlert() {
         viewModel.alert
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] details in
-                guard let self = self else { return }
+            .subscribe(onNext: { [unowned self] details in
                 let alertController = UIAlertController(title: details.alertTitle,
                                                         message: details.alertMessage,
                                                         preferredStyle: .alert)
@@ -90,8 +89,12 @@ final class ContactsViewController: UIViewController {
     }
 
     private func bindShare() {
-        let activityController = UIActivityViewController(activityItems: ["NO IDEA"], applicationActivities: nil)
-        present(activityController, animated: true)
+        viewModel.share
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [unowned self] url in
+                let activityController = UIActivityViewController(activityItems: ["NO IDEA"], applicationActivities: nil)
+                self.present(activityController, animated: true)
+            }).disposed(by: disposeBag)
     }
 
     // MARK: - Rx observing

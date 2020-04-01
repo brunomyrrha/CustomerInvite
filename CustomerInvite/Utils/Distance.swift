@@ -10,15 +10,7 @@ import Foundation
 
 typealias Coordinates = (latitude: Double, longitude: Double)
 
-protocol Distance:AnyObject {
-
-    var instance: Distance { get }
-
-    func distance(from location: Coordinates) -> Double
-
-}
-
-final class DistanceBase: Distance {
+final class Distance {
 
     private struct Constants {
 
@@ -28,14 +20,14 @@ final class DistanceBase: Distance {
 
     // MARK: - Singleton instance
 
-    let instance: Distance = DistanceBase()
+    static let instance = Distance()
 
     private init() {}
 
     // MARK: - Public methods
 
-    func distance(from location: Coordinates) -> Double {
-        0.0
+    func distance(from origin: Coordinates, to destination: Coordinates) -> Double {
+        calculateGreatCircleDistance1(from: origin, to: destination)
     }
 
     // MARK: - Private methods (not exposed)

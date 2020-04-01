@@ -9,17 +9,19 @@
 import Foundation
 
 
-typealias DownloadCompletion = (Any?, URLResponse?, Error?) -> Void
+typealias DownloadCompletion = (URL?, URLResponse?, Error?) -> Void
 
 final class FileManager {
 
-    class func download(url: URL, completion: @escaping  DownloadCompletion) {
-        let task = URLSession.shared.downloadTask(with: url) { local, response, error in
-            completion(local, response, error)
+    class func download(from url: URL, completion: @escaping  DownloadCompletion) {
+        let task = URLSession.shared.downloadTask(with: url) { data, response, error in
+            completion(data, response, error)
         }
         task.resume()
     }
 
-    
+    class func exportTo() {
+        
+    }
 
 }
