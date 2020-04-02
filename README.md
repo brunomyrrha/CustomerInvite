@@ -21,7 +21,8 @@ There's a **export.txt** example file included in the root of this project
 
 ## Images
 Some images of how it should looks like
-![Complete list](https://github.com/brunomyrrha/CustomerInvite/blob/master/tutorialImages/loading.png)
-![Filtered list](https://github.com/brunomyrrha/CustomerInvite/blob/master/tutorialImages/filter_list.png)
-![Loading screen](https://github.com/brunomyrrha/CustomerInvite/blob/master/tutorialImages/loading.png)
-![Timeout screen](https://github.com/brunomyrrha/CustomerInvite/blob/master/tutorialImages/timeout.png)
+<kbd><img src="https://github.com/brunomyrrha/CustomerInvite/blob/master/tutorialImages/export.png"></kbd>
+<kbd><img src=https://github.com/brunomyrrha/CustomerInvite/blob/master/tutorialImages/full_list.png"></kbd>
+<kbd><img src="https://github.com/brunomyrrha/CustomerInvite/blob/master/tutorialImages/filter_list.png"></kbd>
+<kbd><img src="https://github.com/brunomyrrha/CustomerInvite/blob/master/tutorialImages/loading.png"></kbd>
+<kbd><img src="https://github.com/brunomyrrha/CustomerInvite/blob/master/tutorialImages/timeout.png"></kbd>
