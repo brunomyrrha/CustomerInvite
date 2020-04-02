@@ -20,9 +20,11 @@ There's a **export.txt** example file included in the root of this project
 * It uses the default timeout for operations.
 
 ## Images
-Some images of how it should looks like
+Some images of how it should looks like:
+
+
 <kbd><img src="https://github.com/brunomyrrha/CustomerInvite/blob/master/tutorialImages/export.png"></kbd>
-<kbd><img src=https://github.com/brunomyrrha/CustomerInvite/blob/master/tutorialImages/full_list.png"></kbd>
+<kbd><img src="https://github.com/brunomyrrha/CustomerInvite/blob/master/tutorialImages/full_list.png"></kbd>
 <kbd><img src="https://github.com/brunomyrrha/CustomerInvite/blob/master/tutorialImages/filter_list.png"></kbd>
 <kbd><img src="https://github.com/brunomyrrha/CustomerInvite/blob/master/tutorialImages/loading.png"></kbd>
 <kbd><img src="https://github.com/brunomyrrha/CustomerInvite/blob/master/tutorialImages/timeout.png"></kbd>
