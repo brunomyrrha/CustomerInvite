@@ -15,6 +15,7 @@ protocol ContactsViewModel: AnyObject {
     var dataSource: Observable<[Contact]> { get }
     var isDataLoading: Observable<Bool> { get }
     var isDataFiltered: Observable<Bool> { get }
+    var isRefreshing: Observable<Bool> { get }
     var alert: Observable<AlertDetails> { get }
     var share: Observable<[Any]> { get }
 
@@ -25,5 +26,7 @@ protocol ContactsViewModel: AnyObject {
     func exportData()
 
     func filterData()
+
+    func refreshData()
 
 }

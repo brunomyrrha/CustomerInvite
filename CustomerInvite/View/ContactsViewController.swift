@@ -29,12 +29,19 @@ final class ContactsViewController: UIViewController {
     private let viewModel: ContactsViewModel = ContactsViewModelBase()
     private let disposeBag = DisposeBag()
 
+    // MARK: - Initialization
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        commonInit()
+        viewModel.viewDidLoad()
+    }
+
+    private func commonInit() {
         bind()
         observe()
-        viewModel.viewDidLoad()
+        configureRefreshControl()
     }
 
     // MARK: - Rx binding
@@ -43,6 +50,7 @@ final class ContactsViewController: UIViewController {
         bindDataSource()
         bindIsDataLoading()
         bindIsDataFiltered()
+        bindIsRefreshing()
         bindAlert()
         bindShare()
     }
@@ -75,6 +83,14 @@ final class ContactsViewController: UIViewController {
             .disposed(by: disposeBag)
     }
 
+    private func bindIsRefreshing() {
+        viewModel.isRefreshing
+            .observeOn(MainScheduler.instance)
+            .distinctUntilChanged()
+            .map { !$0 }
+            .subscribe(onNext: updateRefresControl)
+            .disposed(by: disposeBag)
+    }
     
     private func bindAlert() {
         viewModel.alert
@@ -129,6 +145,21 @@ final class ContactsViewController: UIViewController {
 
     private func toggleFilter(hasFilter: Bool) {
         filterButton.title = hasFilter ? Constants.removeFilterTitle : Constants.filterTitle
+    }
+
+    private func configureRefreshControl() {
+        contactsTableView.refreshControl = UIRefreshControl()
+        contactsTableView.refreshControl?.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
+    }
+
+    private func updateRefresControl(endRefreshing: Bool) {
+        if endRefreshing {
+            contactsTableView.refreshControl?.endRefreshing()
+        }
+    }
+
+    @objc private func refreshTableView() {
+        viewModel.refreshData()
     }
 
 }

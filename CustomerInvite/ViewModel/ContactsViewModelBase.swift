@@ -32,6 +32,7 @@ final class ContactsViewModelBase: ContactsViewModel {
     lazy var dataSource = { _dataSource.asObservable() }()
     lazy var isDataLoading = { _isDataLoading.asObservable() }()
     lazy var isDataFiltered = { _isDataFiltered.asObservable() }()
+    lazy var isRefreshing = { _isRefreshing.asObservable() }()
     lazy var alert = { _alert.asObservable() }()
     lazy var share = { _share.asObservable() }()
 
@@ -40,6 +41,7 @@ final class ContactsViewModelBase: ContactsViewModel {
     private let _dataSource = PublishSubject<[Contact]>()
     private let _isDataLoading = BehaviorRelay<Bool>(value: false)
     private let _isDataFiltered = BehaviorRelay<Bool>(value: false)
+    private let _isRefreshing = BehaviorRelay<Bool>(value: false)
     private let _alert = PublishSubject<AlertDetails>()
     private let _share = PublishSubject<[Any]>()
 
@@ -52,28 +54,13 @@ final class ContactsViewModelBase: ContactsViewModel {
 
     func importData() {
         _isDataLoading.accept(true)
-        api.downloadTxtAsString { [weak self] (dataString, error) in
-            guard let self = self else { return }
-            if let dataString = dataString {
-                self.contacts = self.convertStringData(from: dataString)
-                self.publishDataSource()
-            } else {
-                let details = AlertDetails(alertTitle: Constants.errorTitle,
-                                           alertMessage: error?.localizedDescription ?? Constants.defaultErrorMessage)
-                self._alert.onNext(details)
-            }
-            self._isDataLoading.accept(false)
-        }
+        downloadData { [weak self] in self?._isDataLoading.accept(false) }
     }
 
     func exportData() {
-        let data = isFiltered ? contacts.filter { $0.distanceFromOffice <= Constants.maxDistanceFromOffice } : contacts
-        if let shareableItem = DataManager.export(data) {
-            _share.onNext([shareableItem])
-        } else {
-            let details = AlertDetails(alertTitle: Constants.errorTitle, alertMessage: Constants.createFileErrorMessage)
-            _alert.onNext(details)
-        }
+        _isDataLoading.accept(true)
+        exportData { [weak self] in self?._isDataLoading.accept(false) }
+
     }
 
     func filterData() {
@@ -81,8 +68,41 @@ final class ContactsViewModelBase: ContactsViewModel {
         publishDataSource()
         publishDataIsFiltered()
     }
+
+    func refreshData() {
+        _isRefreshing.accept(true)
+        downloadData { [weak self] in self?._isRefreshing.accept(false) }
+    }
     
     // MARK: - Private methods
+
+    private func exportData(completion: (() -> Void)? = nil) {
+        let data = isFiltered ? contacts.filter { $0.distanceFromOffice <= Constants.maxDistanceFromOffice } : contacts
+        if let shareableItem = DataManager.export(data) {
+            _share.onNext([shareableItem])
+        } else {
+            let details = AlertDetails(alertTitle: Constants.errorTitle, alertMessage: Constants.createFileErrorMessage)
+            _alert.onNext(details)
+        }
+        completion?()
+    }
+
+    private func downloadData(completion: (()->Void)? = nil) {
+        api.downloadTxtAsString { [weak self] (dataString, error) in
+            guard let self = self else { return }
+            if let dataString = dataString {
+                self.contacts = self.convertStringData(from: dataString)
+                self.publishDataSource()
+                completion?()
+            } else {
+                let details = AlertDetails(alertTitle: Constants.errorTitle,
+                                           alertMessage: error?.localizedDescription ?? Constants.defaultErrorMessage)
+                self._alert.onNext(details)
+                completion?()
+            }
+
+        }
+    }
 
     private func publishDataSource() {
         let data = isFiltered ? contacts.filter { $0.distanceFromOffice <= Constants.maxDistanceFromOffice } : contacts
